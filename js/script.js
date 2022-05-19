@@ -22,44 +22,50 @@ const distance = document.getElementById("distance");
 const age = document.getElementById("age");
 const generateButton = document.getElementById("generateButton");
 const clearButton = document.getElementById("clearButton");
+const ticketSection = document.getElementById("ticketSection");
 
 generateButton.addEventListener("click", function () {
-
   let totalprice = distance.value * 0.21;
 
-  if (distance.value > 1200 || distance.value < 10 || isNaN(distance.value) || distance.value < 0) {
+  if (
+    distance.value > 1200 ||
+    distance.value < 10 ||
+    isNaN(distance.value) ||
+    distance.value < 0
+  ) {
     alert(
       "Attenzione! Il numero di chilometri deve essere compreso tra 10 e 1200"
     );
-    totalprice = "Inserisci i dati corretti";
   }
 
- if (passengerName.value == "") {
+  if (passengerName.value == "") {
     alert("Attenzione! Inserire il nome del passeggero");
-    totalprice = "Inserisci i dati corretti";
   }
 
   if (age.value == "Minorenne") {
     totalprice = (totalprice - totalprice * 0.2).toFixed(2);
+    ticketSection.classList.add("d-block");
   }
 
   if (age.value == "Over 65") {
     totalprice = (totalprice - totalprice * 0.4).toFixed(2);
+    ticketSection.classList.add("d-block");
   }
 
   if (age.value == "Maggiorenne") {
-    totalprice = (totalprice).toFixed(2);
+    totalprice = totalprice.toFixed(2);
+    ticketSection.classList.add("d-block");
   }
 
-  document.getElementById("printpassengername").innerHTML= passengerName.value;
-  document.getElementById("printtotalprice").innerHTML= totalprice;
-
+  document.getElementById("printpassengername").innerHTML = passengerName.value;
+  document.getElementById("printtotalprice").innerHTML = totalprice;
 });
 
 clearButton.addEventListener("click", function () {
   passengerName.value = "";
   distance.value = "";
   age.value = "";
-  document.getElementById("printpassengername").innerHTML= "";
-  document.getElementById("printtotalprice").innerHTML= "";
+  document.getElementById("printpassengername").innerHTML = "";
+  document.getElementById("printtotalprice").innerHTML = "";
+  ticketSection.classList.remove("d-block");
 });
