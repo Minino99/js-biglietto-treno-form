@@ -1,0 +1,49 @@
+body {
+  background-color: #b91450;
+}
+
+h2 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+h3,h4,h5,h6{
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+}
+
+.color-violet {
+  color: #b91450;
+}
+
+.calculator-container {
+  border-radius: 22px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px #000000;
+}
+
+select {
+  width: 100%;
+}
+
+.greybtn {
+  background-color: #cccccc;
+  color: #b91450;
+  font-weight: 700;
+  border: 2px solid goldenrod;
+}
+
+.simpleborder{
+  border: 1px solid black;
+}
+
+.personalinfos{
+ background-color: #808080;
+}
+
+/* .finalticket-section{
+ display: none;
+} */
