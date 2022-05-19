@@ -20,19 +20,19 @@
         <div class="row justify-content-center align-items-center gap-5 pb-3">
           <div class="col">
             <div class="py-3 color-violet text-center">Nome Cognome</div>
-            <input type="text" />
+            <input type="text" id="passengerName" />
           </div>
           <div class="col">
             <div class="py-3 color-violet text-center">Km da percorrere</div>
-            <input type="number" />
+            <input type="number" id="distance" />
           </div>
           <div class="col">
             <div class="py-3 color-violet text-center">Fascia d'età</div>
             <div>
-              <select>
+              <select id="age">
                 <option selected>Maggiorenne</option>
-                <option value="1">Minorenne</option>
-                <option value="2">Over 65</option>
+                <option>Minorenne</option>
+                <option>Over 65</option>
               </select>
             </div>
           </div>
@@ -40,10 +40,9 @@
       </div>
 
       <div class="d-flex justify-content-center align-items-center gap-4 pb-4">
-        <div><button type="button" class="btn greybtn">Genera</button></div>
-        <div><button type="button" class="btn greybtn simpleborder">Annulla</button></div>
+        <div><button type="button" class="btn greybtn" id="generateButton">Genera</button></div>
+        <div><button type="button" class="btn greybtn simpleborder" id="clearButton">Annulla</button></div>
       </div>
-
     </div>
 
     <div class="finalticket-section">
@@ -53,7 +52,7 @@
         <div class="row">
           <div class="col-2 personalinfos">
             <h5 class="pt-3">NOME PASSEGGERO</h5>
-            <h6 id="passengername"></h6>
+            <h6 id="printpassengername"></h6>
           </div>
           <div class="col">
             <div class="d-flex justify-content-between">
@@ -71,15 +70,14 @@
               </div>
               <div>
                 <div class="fw-bold pt-3 pb-5">Costo biglietto</div>
-                <div  class="pb-3" id="totalprice"></div>
+                <div  class="pb-3">€ <span id="printtotalprice"></span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
 
-
+<script src="js/script.js"></script>
   </body>
 </html>
